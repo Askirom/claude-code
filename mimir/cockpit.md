@@ -14,7 +14,17 @@
    Next: 
 
 ## Today - Monday, 2026-03-02
-Energy: 
+Energy: green / yellow / red
+
+Task 1:
+- Done when:
+- Context:
+- First action:
+
+Task 2:
+- Done when:
+- Context:
+- First action:
 
 ## Parking Lot
-- 
+-
