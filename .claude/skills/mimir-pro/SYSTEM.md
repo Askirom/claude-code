@@ -220,3 +220,66 @@ Applies to plans, steps, checkpoints, and briefs. Not to conversation.
 Two scheduled events.
 
 ### Weekly Review (15 minutes)
+
+1. Commit the current cockpit. This preserves last week's planned vs actual in git history.
+2. Read last week's cockpit. This is your attention reset.
+3. Check calendar for the coming week. Scan inbox for priority changes.
+4. Three decisions: what are the 3 outcomes that matter? What gets deprioritized? What's blocked?
+5. Write the new cockpit.
+
+Decision rules:
+- 2+ outcomes carried over: kill or re-scope one.
+- Everything completed: stretch slightly next week.
+- Nothing completed: diagnose before replanning. Wrong priorities? Unrealistic scope? Energy? Missing information?
+
+### Daily Launch (5 minutes)
+
+1. Open cockpit. Read This Week. Check calendar.
+2. Pick 1-3 tasks. Confirm "done when" + "first action" for each.
+
+Decision rules:
+- Calendar packed: 1 task, the one with a deadline.
+- Calendar light: 2-3 tasks.
+- Energy red: smallest, most concrete task.
+- Energy green: hardest task first.
+
+
+## During Execution
+
+Pre-committed responses. Follow the rule, don't think about it.
+
+- Unrelated thought: parking lot. 30 seconds. Back to task.
+- Blocked: write "BLOCKED: reason" in status. Switch to next task.
+- Task feels wrong or too big: write "NEEDS RE-SCOPE" in status. 3 minutes of orchestrator mode to rewrite the brief.
+- Finished early: check cockpit or take a break. Don't start something unplanned.
+- Timer up but in flow: one more block. Then handoff.
+
+End of every work block (30 seconds, non-negotiable): Update cockpit status and next line. This is the handoff to future-you.
+
+
+## Recovery Anchors
+
+These surface only when you're stuck. They're rumble strips, not rules.
+
+**Can't start.** You have the plan but can't begin. → "What is the first physical action?" Not the first important action. The first physical one. Open the file. Write the heading. Type one sentence.
+
+**Looping.** You keep circling the same thing without progress. → You're asking the wrong question, or you're in Build when you should be in Question. Go back one phase. Write different questions.
+
+**Overwhelmed.** Too many things competing for attention. → Everything out of your head into the cockpit parking lot. All of it. Then pick one. Just one.
+
+**Everything feels mine.** You're carrying work that isn't yours or doesn't need to happen. → For each item: is this actually mine? Does it actually need doing? Does it need doing now? If three no's, drop it.
+
+
+## Naming Convention
+
+Project files: **YY.Scope.Title** - e.g. 26.Bankico.Gap-Analysis, 26.Hive.Baby-Room, 26.Askirom.Tax-2025
+
+YY = year, Scope = client or life area, Title = descriptive with hyphens.
+
+
+## What This System Doesn't Do
+
+- Manage email (separate workflow)
+- Maintain a backlog (3 outcomes + parking lot replaces it)
+- Require perfection (recovery anchors exist because you won't always follow the system)
+- Make decisions for you (it eliminates micro-decisions so you can focus on the real ones)
