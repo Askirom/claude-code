@@ -130,3 +130,93 @@ Something arrives. Run it through:
 4. **Has a date?** → Calendar.
 5. **Single action?** → Cockpit task.
 6. **Needs thinking?** → Project. Create context page.
+
+Email is transport, not storage. Extract what matters, route it, move on.
+
+
+## The Thinking System
+
+Four phases for any piece of work that needs thinking. Same sequence for a 5-minute question and a 6-week project. For small work, phases compress to seconds.
+
+### ① Notice
+
+Something doesn't fit. A gap between what is and what should be. A request arrives. A problem surfaces. An opportunity appears.
+
+Write down what you noticed. One sentence is enough. "Client has no formal risk assessment process." "Baby room needs to be ready by May." "The report structure doesn't match what the client expects."
+
+This is observation, not analysis. Don't solve it yet.
+
+### ② Question
+
+Decompose by asking questions. Write them in the context page or in chat. Don't try to answer them all at once - write the questions first, then work through them.
+
+If a skill exists for this type of work, load it. Skills are question sets - they give you the scaffolding to think through a specific type of problem.
+
+No skill? Dump rough questions. Refine later. Bad questions are better than no questions. The act of writing them creates structure.
+
+Keep going until you can answer: "Can I build from here?" If yes → Build. If no → more questions.
+
+### ③ Build
+
+The plan emerges from answered questions. If you did the questioning well, the steps are obvious.
+
+Write the execution plan in the project context page. Verb-first steps with completion signals.
+
+Under 5 steps: flat list. Over 10: group into batches of 3-5.
+
+Then execute. Work the plan top to bottom. Don't reconsider, don't optimize. Build.
+
+When things break:
+- Step doesn't work: write down what went wrong. Max 2 alternatives. Pick one.
+- Step bigger than expected: break into sub-steps. Keep going.
+- Missing information: identify the single most blocking piece. Get that.
+- The plan itself is wrong: stop. Go back to Question. This isn't failure - it's the system working.
+
+### ④ Verify
+
+Feynman check. Can you explain what you built in one sentence?
+
+If yes → ship it. Update the cockpit. Write the handoff.
+
+If no → back to Question. Something is unclear or incomplete. The cycle is designed to loop.
+
+When handing work to someone else: include context (what they need to know), the specific ask (one clear action), and what done looks like.
+
+
+## Skills
+
+Skills are composable question sets, not procedure checklists. They live in `mimir/skills/` as markdown files.
+
+A skill for "ISO 27001 Gap Analysis" isn't "step 1, step 2, step 3." It's a structured set of questions:
+
+- What's the scope? Which locations, which departments, which processes?
+- What's the current state? Existing policies, certifications, prior assessments?
+- What's the target? Full certification or internal compliance?
+- What are the constraints? Timeline, budget, available staff?
+- Which Annex A control areas are likely weakest based on initial information?
+
+Answering these questions produces the plan. The skill is loaded during the Question phase, not during Build.
+
+Create a skill when you notice yourself facing the same type of problem a third time. Not before.
+
+
+## Wording Discipline
+
+Applies to plans, steps, checkpoints, and briefs. Not to conversation.
+
+**Verb-first, imperative.** "Read config file and identify database settings."
+
+**Built-in completion signal.** "Write README with installation, usage, and three examples."
+
+**Concrete nouns.** "Move helper functions from main.py to utils.py."
+
+**Explicit dependencies.** "After gap analysis: draft risk treatment plan based on findings in [link]."
+
+**Banned in plans:** "work on," "improve," "handle," "address," "deal with," "look into," "think about."
+
+
+## Rituals
+
+Two scheduled events.
+
+### Weekly Review (15 minutes)
