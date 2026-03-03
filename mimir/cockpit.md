@@ -2,10 +2,10 @@
 
 ## This Week (3 max)
 1. [ ] **Redesign ISO 27001 topic field page** (HiSolutions internal)
-   Status: Project folder created, execution plan drafted
+   Status: Project created, execution plan drafted
    Next: Audit SharePoint page — screenshot + document layout issues
    Deadline: 2026-03-06
-   Context: mimir/projects/26.HiS.ISO-Landscape/
+   Context: mimir/projects/26.HiS.ISO-Landscape.md
 
 2. [ ] 
    Status: 
