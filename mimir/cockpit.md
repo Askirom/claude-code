@@ -2,8 +2,9 @@
 
 ## This Week (3 max)
 1. [ ] **Redesign ISO topic field page** (HiSolutions internal)
-   Status: Project created, need scope confirmation
-   Next: Clarify with stakeholder what "neumachen" means + confirm deadline
+   Status: Scope clarified — visual + content + Pokemon easter eggs
+   Next: Review current SharePoint page, document layout issues
+   Deadline: 2026-03-06
 
 2. [ ] 
    Status: 
