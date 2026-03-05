@@ -109,9 +109,10 @@ Apply decision rules:
 
 When Robin starts a daily launch:
 
-1. Read the cockpit and today's calendar.
-2. Suggest 1-3 tasks based on calendar density and energy level.
-3. For each: confirm "done when" and "first action" are sharp enough to start without thinking.
+1. Read the cockpit. Pull today's events from khal.
+2. Ask energy level.
+3. Draft timeboxes: place [event] entries from calendar, then fill gaps with [project] and [work] blocks based on energy and priorities.
+4. Write the Today section in the cockpit.
 
 
 ## Recovery Support

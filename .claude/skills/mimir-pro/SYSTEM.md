@@ -63,24 +63,18 @@ The one file you read every morning and write to every time you stop working. It
 
 (as many as needed)
 
-## Today - Day, Date
+## Today, Day YYYY-MM-DD
 Energy: green / yellow / red
 
-Task 1: name
-- Done when: specific deliverable
-- Context: link or pointer
-- First action: literal first physical step
-
-Task 2: name
-- Done when:
-- Context:
-- First action:
+09:00 - 09:30  [event] Meeting with client
+10:00 - 11:30  [project] projects/26.Client.Topic/_context
+14:00 - 15:00  [work] Email + Admin
 
 ## Parking Lot
 - unsorted, uncommitted captures
 ```
 
-Every task gets "done when" and "first action." The "Next:" line under each outcome is your attention anchor - read it before starting a work block.
+Today is timeboxed. Three types: [event] for calendar events (pulled from khal during Daily Launch), [project] for focused project work (links to context page), [work] for admin, email, and other non-project blocks. The time constraint gives permission to start and permission to stop.
 
 Commit the cockpit before rewriting it each week. Git history is your log of planned vs actual.
 
@@ -241,13 +235,14 @@ Decision rules:
 ### Daily Launch (5 minutes)
 
 1. Open cockpit. Read This Week. Check calendar.
-2. Pick 1-3 tasks. Confirm "done when" + "first action" for each.
+2. Set energy level.
+3. Timebox the day: assign tasks to time slots based on calendar gaps and energy.
 
 Decision rules:
-- Calendar packed: 1 task, the one with a deadline.
-- Calendar light: 2-3 tasks.
-- Energy red: smallest, most concrete task.
-- Energy green: hardest task first.
+- Calendar packed: one timebox, the one with a deadline.
+- Calendar light: fill 2-3 slots.
+- Energy red: smallest, most concrete task first.
+- Energy green: hardest task in the morning slot.
 
 
 ## During Execution
