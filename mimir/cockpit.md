@@ -17,8 +17,10 @@
    Next: SBF-Blatt reparieren, dann Workshop-Planung April
    Context: mimir/projects/26.GVL.ISMS/_context
 
-## Today - Thursday, 2026-03-05
-Energy: 
+## Today, Thursday 2026-03-05
+Energy:
+
+(no timeboxes set, GVL blocked until Monday)
 
 ## Parking Lot
 -

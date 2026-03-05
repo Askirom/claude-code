@@ -28,7 +28,7 @@ Phase: build
 - [x] 1. Ersten Entwurf Schutzbedarfsfeststellung erstellen
 - [x] 2. PL-Review einholen
 - [x] 3. Kundentermin zur Abstimmung (2026-03-04, Ergebnisse eingearbeitet)
-- [ ] 4. SBF-Vorlage klären mit Christian (2026-03-06, 14:00 bis 14:30)
+- [ ] 4. SBF-Vorlage klären mit Christian (2026-03-09, 09:00 bis 09:30)
 - [ ] 5. SBF-Blatt reparieren (Feedback aus Meeting + Vorlage einarbeiten)
 - [ ] 6. Blocker im April finden für 3 Workshops (intern je 4h, Kunde je 2h)
 - [ ] 7. Email-Vorschläge zur Workshop-Einladung an GVL senden
@@ -40,4 +40,4 @@ Phase: build
 - Kunden-SharePoint: 26.gvl.SBF
 
 ## Checkpoint
-Stopped at: Warten auf Termin mit Christian (06.03., 14:00). SBF-Vorlage klären, dann SBF-Blatt reparieren.
+Stopped at: Warten auf Termin mit Christian (09.03., 09:00). SBF-Vorlage klären, dann SBF-Blatt reparieren.
