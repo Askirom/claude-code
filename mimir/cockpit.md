@@ -1,22 +1,24 @@
 # Cockpit - Week of 2026-03-02
 
-## This Week (3 max)
+## This Week
 1. [ ] **Redesign ISO 27001 topic field page** (HiSolutions internal)
-   Status: Project created, execution plan drafted
-   Next: Audit SharePoint page — screenshot + document layout issues
+   Status: Design done, Pokemon easter eggs outstanding
+   Next: Draft Pokemon easter eggs, plant them in PowerPoint
    Deadline: 2026-03-06
-   Context: mimir/projects/26.HiS.ISO-Landscape.md
+   Context: mimir/projects/26.HiS.ISO-Landscape/_context
 
-2. [ ] 
-   Status: 
-   Next: 
+2. [ ] **ISO Threat Catalogue** (HiSolutions internal)
+   Status: Split from project 26, not started
+   Next: Research threat catalogues (ISO 27001 context)
+   Context: mimir/projects/26.HiS.ISO-Threat-Catalogue/_context
 
-3. [ ] 
-   Status: 
-   Next: 
+3. [ ] **GVL ISMS — Schutzbedarfsfeststellung** (GVL)
+   Status: Meeting 04.03. done, Feedback eingearbeitet
+   Next: SBF-Blatt reparieren, dann Workshop-Planung April
+   Context: mimir/projects/26.GVL.ISMS/_context
 
-## Today - Tuesday, 2026-03-02
+## Today - Thursday, 2026-03-05
 Energy: 
 
 ## Parking Lot
-- 
+-

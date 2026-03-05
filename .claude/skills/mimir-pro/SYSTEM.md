@@ -20,7 +20,9 @@ All working state lives in one GitHub repository as markdown files. This is your
 mimir/
   cockpit.md                      # This week + today + parking lot
   projects/
-    26-bankico-gap-analysis.md    # One context page per active project
+    26.Client.Topic/
+      _context.md                 # Project state, constraints, decisions, plan
+      2026-03-04-Meeting.md       # Meeting notes, artifacts
     archive/
   skills/                         # Composable question sets
 ```
@@ -43,23 +45,23 @@ Projects for work product. References for external knowledge that spans projects
 
 ## The Cockpit
 
-The one file you read every morning and write to every time you stop working.
+The one file you read every morning and write to every time you stop working. It's your live overview of everything active.
 
 ```markdown
 # Cockpit - Week of YYYY-MM-DD
 
-## This Week (3 max)
+## This Week
 1. [ ] Outcome: what done looks like
    Status: one line
    Next: next physical action
+   Context: link to context page
 
 2. [ ] Outcome: what done looks like
    Status:
    Next:
+   Context:
 
-3. [ ] Outcome: what done looks like
-   Status:
-   Next:
+(as many as needed)
 
 ## Today - Day, Date
 Energy: green / yellow / red
@@ -78,7 +80,7 @@ Task 2: name
 - unsorted, uncommitted captures
 ```
 
-Max 3 weekly outcomes. Want a 4th? Kill or finish one first. Every task gets "done when" and "first action." The "Next:" line under each outcome is your attention anchor - read it before starting a work block.
+Every task gets "done when" and "first action." The "Next:" line under each outcome is your attention anchor - read it before starting a work block.
 
 Commit the cockpit before rewriting it each week. Git history is your log of planned vs actual.
 
@@ -87,8 +89,10 @@ Commit the cockpit before rewriting it each week. Git history is your log of pla
 
 For work spanning 3+ sessions with its own scope, constraints, and decisions.
 
+Each project is a folder: `projects/26.Client.Topic/`. The context page is always `_context.md`:
+
 ```markdown
-# 26.Client.Project-Title
+# 26.Client.Topic
 
 ## State
 Client/stakeholder:
@@ -96,7 +100,7 @@ Scope:
 Phase: notice / question / build / verify / done
 
 ## Constraints
-- deadline, dependency, blocker, budget - one per line
+- deadline, dependency, blocker, budget
 
 ## Decisions
 - Key decisions and reasoning, accumulated over project life
@@ -112,6 +116,8 @@ Phase: notice / question / build / verify / done
 ## Checkpoint
 Stopped at: [used when there's no active plan, or next action is outside the plan]
 ```
+
+Meeting notes, artifacts, and other project files live next to `_context.md` in the same folder.
 
 When a plan exists, the next unchecked step IS the checkpoint. The Checkpoint line is for everything else: early project phases, waiting states, between plans.
 
@@ -224,11 +230,11 @@ Two scheduled events.
 1. Commit the current cockpit. This preserves last week's planned vs actual in git history.
 2. Read last week's cockpit. This is your attention reset.
 3. Check calendar for the coming week. Scan inbox for priority changes.
-4. Three decisions: what are the 3 outcomes that matter? What gets deprioritized? What's blocked?
+4. Decide: what's active? What gets deprioritized? What's blocked?
 5. Write the new cockpit.
 
 Decision rules:
-- 2+ outcomes carried over: kill or re-scope one.
+- Stale outcomes carried over multiple weeks: kill or re-scope.
 - Everything completed: stretch slightly next week.
 - Nothing completed: diagnose before replanning. Wrong priorities? Unrealistic scope? Energy? Missing information?
 
@@ -272,14 +278,14 @@ These surface only when you're stuck. They're rumble strips, not rules.
 
 ## Naming Convention
 
-Project files: **YY.Scope.Title** - e.g. 26.Bankico.Gap-Analysis, 26.Hive.Baby-Room, 26.Askirom.Tax-2025
+Project folders: **YY.Client.Topic** e.g. `26.Bankico.Gap-Analysis/`, `26.Hive.Baby-Room/`, `26.Askirom.Tax-2025/`
 
-YY = year, Scope = client or life area, Title = descriptive with hyphens.
+YY = year, Client = client or life area, Topic = descriptive with hyphens. Context page is always `_context.md` inside the folder.
 
 
 ## What This System Doesn't Do
 
 - Manage email (separate workflow)
-- Maintain a backlog (3 outcomes + parking lot replaces it)
+- Maintain a backlog (cockpit + parking lot replaces it)
 - Require perfection (recovery anchors exist because you won't always follow the system)
 - Make decisions for you (it eliminates micro-decisions so you can focus on the real ones)
