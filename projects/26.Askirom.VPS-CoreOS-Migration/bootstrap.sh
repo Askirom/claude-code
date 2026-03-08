@@ -18,23 +18,46 @@ chown -R askirom:askirom /home/askirom/.ssh
 chmod 700 /home/askirom/.ssh
 chmod 600 /home/askirom/.ssh/authorized_keys
 
-# 3. Passwordless sudo for askirom
+# 3. Also generate a keypair for askirom (for GitHub, etc.)
+su - askirom -c 'ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N ""'
+
+# 4. Passwordless sudo for askirom
 echo "askirom ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/askirom
 
-# 4. Harden SSH
+# 5. Harden SSH
 sed -i 's/^#\?PermitRootLogin.*/PermitRootLogin no/' /etc/ssh/sshd_config
 sed -i 's/^#\?PasswordAuthentication.*/PasswordAuthentication no/' /etc/ssh/sshd_config
 systemctl restart sshd
 
-# 5. Install essentials
-dnf install -y zsh git curl podman
+# 6. Install system packages
+dnf install -y \
+  zsh git curl \
+  podman \
+  khal khard vdirsyncer \
+  rclone fuse \
+  firewalld
 
-# 6. Install Bun
+# 7. Install Bun
 su - askirom -c 'curl -fsSL https://bun.sh/install | bash'
 
-# 7. Install Claude Code
+# 8. Install Claude Code
 su - askirom -c 'source ~/.zshrc && bun install -g @anthropic-ai/claude-code'
+
+# 9. Install himalaya (not in Fedora repos)
+HIMALAYA_VERSION="1.0.0"
+curl -fsSL "https://github.com/pimalaya/himalaya/releases/latest/download/himalaya.x86_64-unknown-linux-gnu.tar.gz" | tar xz -C /usr/local/bin/
+
+# 10. Firewall (only allow SSH for now, Caddy ports added later)
+systemctl enable --now firewalld
+firewall-cmd --permanent --add-service=ssh
+firewall-cmd --reload
 
 echo ""
 echo "Done. SSH in as askirom and run: claude"
 echo "WARNING: root SSH is now disabled. Use: ssh askirom@<ip>"
+echo ""
+echo "Next steps (via Claude Code):"
+echo "  - Add SSH key to GitHub: cat ~/.ssh/id_ed25519.pub"
+echo "  - Clone mimir repo"
+echo "  - Set up Podman quadlets for all services"
+echo "  - Set up vdirsyncer, rclone, himalaya configs"
