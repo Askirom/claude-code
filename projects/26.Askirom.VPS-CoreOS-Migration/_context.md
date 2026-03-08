@@ -34,7 +34,7 @@ All services currently run behind Cloudflare Tunnel → Caddy reverse proxy on t
 - **Container runtime:** Podman with quadlets (systemd-native)
 - **Reverse proxy:** Caddy (containerized)
 - **Tunnel:** cloudflared (containerized)
-- **Drive mount:** rclone (systemd unit with FUSE)
+- **Storage:** Hetzner Storage Box via CIFS (u558593.your-storagebox.de, pw see Bitwarden Hetzner 2026)
 - **Admin:** Cockpit (native package, routed through Caddy)
 - **DNS:** Cloudflare (unchanged)
 
@@ -43,13 +43,13 @@ All services currently run behind Cloudflare Tunnel → Caddy reverse proxy on t
 - CPX32 is the production VPS. Snapshot before touching anything
 - All services must remain reachable at same subdomains after migration
 - Cloudflare Tunnel token/config must be preserved (grab before rebuild)
-- rclone config + Google Drive mount needs to be set up again
+- Hetzner Storage Box needs CIFS mount setup
 - Some container images still need research (opencode, speed, kimi)
 
 ## Risks
 
 - If migration fails, restore from Hetzner snapshot
-- rclone FUSE mount needs `--allow-other` and `/etc/fuse.conf` config
+- Storage Box CIFS mount needs credentials file at `/etc/smbcredentials`
 - Dashboard is a custom Bun app. Needs a Dockerfile or run via bun container image
 - Cockpit runs on host (not in container). Caddy must proxy to localhost:9090
 
@@ -60,8 +60,7 @@ All services currently run behind Cloudflare Tunnel → Caddy reverse proxy on t
 3. Is there a container image for librespeed-rs, or do we build one?
 4. Current Caddy config. Export before rebuild
 5. Current Cloudflare Tunnel config/token. Export before rebuild
-6. Current rclone config. Export before rebuild
-7. SSH public keys for new server
+6. SSH public keys for new server
 
 ---
 
@@ -92,7 +91,7 @@ All services currently run behind Cloudflare Tunnel → Caddy reverse proxy on t
 15. Write Podman quadlet for cloudflared with tunnel token
 16. Deploy quadlets to `/etc/containers/systemd/`, reload systemd
 17. Verify Caddy + cloudflared are running, tunnel is connected
-18. Set up rclone as systemd unit, mount Google Drive to ~/gdrive/
+18. Mount Hetzner Storage Box via CIFS (credentials in Bitwarden)
 
 ### Batch 4: Deploy Services
 
