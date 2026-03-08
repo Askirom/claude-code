@@ -1,0 +1,15 @@
+[Unit]
+Description=LibreSpeed speed test
+After=network-online.target
+
+[Container]
+Image=docker.io/linuxserver/librespeed:latest
+PublishPort=127.0.0.1:8081:80
+Environment=PUID=1000
+Environment=PGID=1000
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

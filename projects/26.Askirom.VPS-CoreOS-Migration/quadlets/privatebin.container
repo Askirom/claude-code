@@ -1,0 +1,14 @@
+[Unit]
+Description=PrivateBin paste service
+After=network-online.target
+
+[Container]
+Image=docker.io/privatebin/nginx-fpm-alpine:latest
+PublishPort=127.0.0.1:8082:8080
+Volume=privatebin-data:/srv/data:Z
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

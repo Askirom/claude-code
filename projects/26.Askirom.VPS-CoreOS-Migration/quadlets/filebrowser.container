@@ -1,0 +1,16 @@
+[Unit]
+Description=Filebrowser web file manager
+After=network-online.target
+
+[Container]
+Image=docker.io/filebrowser/filebrowser:latest
+PublishPort=127.0.0.1:8085:80
+Volume=%h:/srv:Z
+Volume=filebrowser-db:/database:Z
+Environment=FB_NOAUTH=true
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

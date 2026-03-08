@@ -1,0 +1,16 @@
+[Unit]
+Description=Caddy reverse proxy
+After=network-online.target
+
+[Container]
+Image=docker.io/library/caddy:2
+PublishPort=80:80
+Volume=%h/.config/caddy/Caddyfile:/etc/caddy/Caddyfile:ro,Z
+Volume=caddy-data:/data
+Volume=caddy-config:/config
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

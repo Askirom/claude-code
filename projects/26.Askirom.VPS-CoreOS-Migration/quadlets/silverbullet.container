@@ -1,0 +1,15 @@
+[Unit]
+Description=SilverBullet knowledge base
+After=network-online.target
+
+[Container]
+Image=ghcr.io/silverbulletmd/silverbullet:latest
+PublishPort=127.0.0.1:3001:3000
+Volume=%h/mimir:/space:Z
+EnvironmentFile=%h/.config/silverbullet/env
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target

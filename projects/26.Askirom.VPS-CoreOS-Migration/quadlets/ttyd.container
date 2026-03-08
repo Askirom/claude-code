@@ -1,0 +1,14 @@
+[Unit]
+Description=ttyd web terminal
+After=network-online.target
+
+[Container]
+Image=docker.io/tsl0922/ttyd:latest
+PublishPort=127.0.0.1:7681:7681
+Exec=ttyd --writable zsh -l
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
