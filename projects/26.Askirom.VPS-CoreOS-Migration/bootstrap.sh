@@ -34,7 +34,7 @@ dnf install -y \
   zsh git curl \
   podman \
   khal khard vdirsyncer \
-  rclone fuse \
+  cifs-utils \
   firewalld
 
 # 7. Install Bun
@@ -60,4 +60,5 @@ echo "Next steps (via Claude Code):"
 echo "  - Add SSH key to GitHub: cat ~/.ssh/id_ed25519.pub"
 echo "  - Clone mimir repo"
 echo "  - Set up Podman quadlets for all services"
-echo "  - Set up vdirsyncer, rclone, himalaya configs"
+echo "  - Set up vdirsyncer, himalaya configs"
+echo "  - Mount Hetzner Storage Box via CIFS"
