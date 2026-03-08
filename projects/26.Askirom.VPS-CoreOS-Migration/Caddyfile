@@ -1,0 +1,55 @@
+{
+    auto_https off
+}
+
+http://notes.askirom.eu {
+    reverse_proxy localhost:3001
+}
+
+http://opencode.askirom.eu {
+    reverse_proxy localhost:3000
+}
+
+http://admin.askirom.eu {
+    reverse_proxy https://localhost:9090 {
+        transport http {
+            tls_insecure_skip_verify
+        }
+        header_up Upgrade {http.request.header.Upgrade}
+        header_up Connection {http.request.header.Connection}
+        header_up Host {host}
+        header_up Origin https://{host}
+        header_up X-Forwarded-Proto https
+    }
+}
+
+http://paste.askirom.eu {
+    root * /var/www/privatebin
+    php_fastcgi unix//run/php/php8.3-fpm.sock
+    file_server
+}
+
+http://ntfy.askirom.eu {
+    reverse_proxy localhost:2586
+}
+
+http://speed.askirom.eu {
+    reverse_proxy localhost:8081
+}
+
+http://tty.askirom.eu {
+    reverse_proxy localhost:7681
+}
+
+http://files.askirom.eu {
+    reverse_proxy localhost:8085
+}
+
+http://dash.askirom.eu {
+    header Cache-Control "no-cache, no-store, must-revalidate"
+    reverse_proxy localhost:3002
+}
+
+http://kimi.askirom.eu {
+    reverse_proxy localhost:5494
+}

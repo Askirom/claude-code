@@ -1,0 +1,5 @@
+# ntfy server config (only non-default values)
+base-url: "https://ntfy.askirom.eu"
+listen-http: ":2586"
+auth-default-access: "deny-all"
+auth-file: "/var/lib/ntfy/user.db"
