@@ -1,90 +1,42 @@
-# 23.DW.ISMS - ISMS-Beratung Deutsche Welle
+# 23.DW.ISMS
 
-## STATE
+## State
+Client/stakeholder: Deutsche Welle (DW)
+Scope: ISMS-Beratung, Erstellung von Richtlinien und Konzepten
+Phase: build
+Waiting:
+Next review:
 
-**Client:** Deutsche Welle (DW)  
-**Scope:** ISMS-Beratung - Erstellung/Aktualisierung von Richtlinien basierend auf InfoSec Baseline und Leitlinie  
-**Phase:** Orient (Kickoff abgeschlossen, Einlesen startet)  
-**Status:** Kickoff-Meeting abgeschlossen (2026-02-09), Scope geklärt
+## Constraints
+- Ressource: Halber bis ganzer Tag pro Woche
+- Format: Richtlinien nach SOLL/KANN/MUSS, wenig Prosa
+- Workflow: Drafting in HiSolutions SharePoint
+- Freigabe: Intendantin unterschreibt final, aber Konsens vorher noetig
+- Parallel: BCM-Projekt laeuft ebenfalls
 
----
+## Decisions
+- Richtlinien-Format: Wenig Text, strukturiert SOLL/KANN/MUSS
+- Schwachstellenmanagement: Environmental CVSS fuer kontextbezogene Bewertung, nicht nur Base Score
+- Vorfallsmanagement: Nur Outlier-Schwachstellen gehen in den Vorfallsprozess, nicht alle
 
-## CONSTRAINTS
+## Plan
+- [x] Kryptokonzept erstellen
+- [ ] Kryptokonzept mit Johannes Klemm und Eike Zimmermann abstimmen
+- [ ] Schwachstellenmanagement: Environmental CVSS Einflussfaktoren recherchieren
+- [ ] Schwachstellenmanagement: ECVSS-Faktoren auf DW-Kontext mappen (ca. 20 Faktoren)
+- [ ] Schwachstellenmanagement: Kreuzreferenz ECVSS zu Base CVSS erstellen
+- [ ] Schwachstellenmanagement: Selbstberechnungsmethode fuer unbekannte Schwachstellen definieren
+- [ ] Schwachstellenmanagement: Richtlinie finalisieren
 
-- **Budget Einlesen:** 2h für InfoSec Baseline + Leitlinie
-- **Budget Gesamt:** ca. 1 Tag (Lesen + Entwurf Richtlinien)
-- **Ressource:** Halber bis ganzer Tag pro Woche einplanen
-- **Format:** Richtlinien nach SOLL/KANN/MUSS, wenig Prosa
-- **Workflow:** Drafting in HiSolutions SharePoint → Update in DW SharePoint
-- **Freigabe:** Intendantin unterschreibt final, aber alle müssen vorher zustimmen
-- **Parallel:** BCM-Projekt läuft ebenfalls
+## Links
+- HiS Kundenportal: <https://kunden.hisolutions.com/sites/10641/PRJ7637/>
+- Schwachstellenmanagement V0.3: <https://kunden.hisolutions.com/sites/10641/PRJ7637/_layouts/15/WopiFrame.aspx?sourcedoc=%7BA62C9B93-5FF2-4EC4-8E11-3C32E60A2B59%7D&file=25.DW.Schwachstellenmanagement.V0.3.docx&action=default>
+- Schwachstellenmanagement Review: [[schwachstellenmanagement-review]]
 
----
+## Notes
+- CISO bei DW: War Redakteur der Leitlinie
+- Intendantin: Unterschreibt final, aber Konsens vorher noetig
+- BCM-Projekt: Parallel aktiv, Abstimmung beachten
 
-## DECISIONS
-
-- **Ansprechpartner DW:** Alex (per Du)
-- **Richtlinien-Format:** Wenig Text, strukturiert SOLL/KANN/MUSS
-- **Quelldokumente:** InfoSec Baseline (Zieldokument) + bestehende Leitlinie bereits vorhanden
-
----
-
-## EXECUTION PLAN
-
-### Phase 1: Einlesen (2h Budget)
-
-1. **Zugriff auf Quelldokumente**
-   - HiSolutions SharePoint öffnen
-   - InfoSec Baseline lokalisieren
-   - Bestehende DW-Leitlinie lokalisieren
-
-2. **Dokumentenanalyse**
-   - InfoSec Baseline durchlesen (Zielbild, nicht Fakt)
-   - Leitlinie durchlesen (CISO war Redakteur)
-   - Gap-Analyse: Was fehlt? Was muss neu?
-   - Notizen zu Richtlinien-Inhalten sammeln
-
-3. **Kontext verstehen**
-   - Format-Anforderungen notieren
-   - BCM-Projekt-Überschneidungen markieren
-   - Offene Fragen für Alex sammeln
-
-### Phase 2: Richtlinien-Entwurf (Rest Budget ~6h)
-
-1. **Struktur aufbauen**
-   - Richtlinien-Katalog definieren
-   - Pro Richtlinie: Scope, SOLL/KANN/MUSS-Regelungen
-   - Abstimmung mit Alex
-
-2. **Drafting in HiSolutions SharePoint**
-   - Erste Richtlinien-Entwürfe
-   - Formatierung wie bei DW
-
-3. **Review & Handover**
-   - Abstimmung mit Alex
-   - Übertragung in DW SharePoint
-
----
-
-## CHECKPOINT
-
-**Aktuell:** Kickoff-Meeting abgeschlossen  
-**Nächster Schritt:** HiSolutions SharePoint öffnen, InfoSec Baseline + Leitlinie lokalisieren
-
----
-
-## LINKS
-
-- **Meeting:** 2026-02-09 mit Johannes Klemm (HiS) und Alex (DW)
-- **Teams:** <https://teams.microsoft.com/meet/31711002679634?p=RsQFWJslfbtf0F911f>
-- **SharePoint HiS:** *(noch einfügen)*
-- **SharePoint DW:** *(noch einfügen)*
-
----
-
-## NOTES
-
-- **CISO bei DW:** War Redakteur der Leitlinie
-- **Intendantin:** Unterschreibt final, aber Konsens vorher nötig
-- **BCM-Projekt:** Parallel aktiv, Abstimmung beachten
-- **Alter Scope (veraltet):** ~v1-Dokumente + Backup-Konzept~ → durch Meeting ersetzt durch Richtlinien-Arbeit
+## Checkpoint
+Stopped at: Schwachstellenmanagement V0.3 Review. CVSS-Ansatz zu aufwaendig, Environmental CVSS als kontextbezogene Alternative. Naechster Schritt: Environmental CVSS Faktoren recherchieren und DW-spezifisch definieren.

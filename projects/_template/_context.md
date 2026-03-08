@@ -4,6 +4,8 @@
 Client/stakeholder:
 Scope:
 Phase: notice / question / build / verify / done
+Waiting:
+Next review:
 
 ## Constraints
 - 

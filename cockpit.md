@@ -12,7 +12,7 @@
    Next: Research threat catalogues (ISO 27001 context)
    Context: mimir/projects/26.HiS.ISO-Threat-Catalogue/_context
 
-3. [x] **GVL ISMS — Schutzbedarfsfeststellung** (GVL)
+3. [ ] **GVL ISMS — Schutzbedarfsfeststellung** (GVL)
    Status: Meeting 04.03. done, Feedback eingearbeitet
    Next: SBF-Blatt reparieren, dann Workshop-Planung April
    Context: mimir/projects/26.GVL.ISMS/_context
@@ -22,7 +22,6 @@ Energy:
 
 (no timeboxes set, GVL blocked until Monday)
 
-## Parking Lot
-- Dashboard (dash.askirom.eu): built, needs sudo setup (systemd + caddy reload + CF tunnel)
+## Tasks
 
-- Testing parking lot
+## Parking Lot
