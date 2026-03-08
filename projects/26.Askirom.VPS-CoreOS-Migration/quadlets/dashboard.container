@@ -1,0 +1,21 @@
+[Unit]
+Description=MIMIR Dashboard
+After=network-online.target
+
+[Container]
+Image=localhost/mimir-dashboard:latest
+PublishPort=127.0.0.1:3002:3002
+Volume=%h/mimir:/home/askirom/mimir:Z
+Volume=%h/calendars:/home/askirom/calendars:ro,Z
+Volume=%h/contacts:/home/askirom/contacts:ro,Z
+Volume=%h/.config/himalaya:/root/.config/himalaya:ro,Z
+Volume=%h/.config/khal:/root/.config/khal:ro,Z
+Volume=%h/.config/vdirsyncer:/root/.config/vdirsyncer:ro,Z
+Environment=TZ=Europe/Berlin
+Environment=HOME=/home/askirom
+
+[Service]
+Restart=always
+
+[Install]
+WantedBy=default.target
