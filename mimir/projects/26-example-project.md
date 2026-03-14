@@ -17,7 +17,8 @@ Phase: notice / question / build / verify / done
 - [ ] 3.
 
 ## Links
--
+- Drive/OneDrive:
+- Relevant docs:
 
 ## Checkpoint
 Stopped at:
